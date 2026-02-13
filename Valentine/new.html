@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial;
+            background: url('C:/html val/DSC03186.jpg') no-repeat center center;
+            background-size: cover;
+			/* background-size: 800px auto;*/
+            /* Optional: Add a background color overlay if image is too bright */
+            /* background-color: #fff0f5; */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:red;">Pranay, will you be my Valentine? ❤️</h1>
+
+    <button onclick="goToNextPage()" 
+            style="padding:10px 20px; background:green; color:white; border:none; border-radius:20px;">
+        Yes
+    </button>
+
+    <button onclick="moveNo()" id="noBtn"
+            style="padding:10px 20px; background:red; color:white; border:none; border-radius:20px;">
+        No
+    </button>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "valentineyes.html";
+        }
+
+        function moveNo() {
+            var btn = document.getElementById("noBtn");
+            btn.style.position = "absolute";
+            btn.style.top = Math.random() * 400 + "px";
+            btn.style.left = Math.random() * 400 + "px";
+        }
+    </script>
+
+</body>
+</html>

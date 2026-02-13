@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine</title>
+
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            font-family: Arial;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Background layer */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('DSC02808.jpg');
+            background-size: cover;
+            background-position: 30% 70%;
+            filter: blur(4px); /* 👈 blur strength */
+            z-index: -2;
+        }
+
+        /* Pink overlay */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(241, 156, 170, 0.144); /* 👈 pink shade */
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1 style="color:rgb(44, 4, 66); margin-top: 350px; font-weight: bold;">
+    Pranay, will you be my Valentine? ❤️
+</h1>
+
+<button onclick="goToNextPage()"
+        style="padding:10px 20px; background:green; color:white; border:none; border-radius:20px; font-weight:bold;">
+    Yes
+</button>
+
+<button onclick="moveNo()" id="noBtn"
+        style="padding:10px 20px; background:red; color:white; border:none; border-radius:20px; font-weight:bold;">
+    No
+</button>
+
+
+<script>
+    function goToNextPage() {
+        window.location.href = "valentineyes.html";
+    }
+
+    function moveNo() {
+        var btn = document.getElementById("noBtn");
+        btn.style.position = "absolute";
+        btn.style.top = Math.random() * 400 + "px";
+        btn.style.left = Math.random() * 400 + "px";
+    }
+</script>
+
+</body>
+</html>
